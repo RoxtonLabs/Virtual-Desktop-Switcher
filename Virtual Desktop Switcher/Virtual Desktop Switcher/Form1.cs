@@ -23,6 +23,7 @@ namespace Virtual_Desktop_Switcher
         const int HOTKEY_ID = 1;
 
         int createdDesktop;
+        int numDesktopsAtStart = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -153,6 +154,7 @@ namespace Virtual_Desktop_Switcher
             {   //If there's only one desktop (or 0, but that can't happen, I hope), then create a new one
                 createDesktop();
                 createdDesktop = curIndex();    //Log that we've created a desktop
+                numDesktopsAtStart = Desktop.Count;
             }
             else
             {   //If we've already got a second desktop, then just switch back to the original one
@@ -172,7 +174,7 @@ namespace Virtual_Desktop_Switcher
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (createdDesktop!=0)
+            if (createdDesktop != 0 && Desktop.Count >= numDesktopsAtStart)
             {
                 DialogResult result = MessageBox.Show("You have created a new desktop. Would you like to close it now?", "Close desktop?", MessageBoxButtons.YesNo);
                 if(result == DialogResult.Yes)

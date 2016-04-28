@@ -34,7 +34,6 @@
             this.rightButton = new System.Windows.Forms.Button();
             this.createButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.indexLabel = new System.Windows.Forms.Label();
             this.bossButton = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
@@ -80,15 +79,6 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Current desktop:";
-            // 
             // indexLabel
             // 
             this.indexLabel.AutoSize = true;
@@ -120,7 +110,6 @@
             this.ClientSize = new System.Drawing.Size(349, 68);
             this.Controls.Add(this.bossButton);
             this.Controls.Add(this.indexLabel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.rightButton);
@@ -140,7 +129,6 @@
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button rightButton;
         private System.Windows.Forms.Button leftButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label indexLabel;
         private System.Windows.Forms.Button bossButton;
         private System.Windows.Forms.NotifyIcon notifyIcon;
